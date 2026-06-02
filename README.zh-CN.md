@@ -35,7 +35,7 @@ Telegram (手机) ──→ Railway 容器 ──→ cc-connect (常驻进程)
 |---|---|
 | `TG_BOT_TOKEN` | Telegram Bot Token，找 [@BotFather](https://t.me/BotFather) 创建 |
 | `TG_ALLOW_FROM` | 允许访问的 Telegram 用户 ID（`*`=不限制，建议设为自己的 ID 保证安全） |
-| `ANTHROPIC_AUTH_TOKEN` | API Key（DeepSeek 用户填 DeepSeek 的，Anthropic 用户填 Anthropic 的） |
+| `ANTHROPIC_API_KEY` | API Key，与 `ANTHROPIC_AUTH_TOKEN` 二选一（DeepSeek / Anthropic） |
 
 ### API 配置（DeepSeek）
 
@@ -49,7 +49,7 @@ Telegram (手机) ──→ Railway 容器 ──→ cc-connect (常驻进程)
 | `CLAUDE_CODE_SUBAGENT_MODEL` | `deepseek-v4-flash` |
 | `CLAUDE_CODE_EFFORT_LEVEL` | `max` |
 
-使用 Anthropic 原生 API 则无需设置以上变量，只填 `ANTHROPIC_AUTH_TOKEN` 即可。
+使用 Anthropic 原生 API 则无需设置以上变量，只填 `ANTHROPIC_API_KEY`（或 `ANTHROPIC_AUTH_TOKEN`）即可。
 
 ### GitHub
 

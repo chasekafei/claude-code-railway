@@ -35,7 +35,7 @@ Telegram (phone) ──→ Railway container ──→ cc-connect (daemon)
 |---|---|
 | `TG_BOT_TOKEN` | Telegram Bot Token from [@BotFather](https://t.me/BotFather) |
 | `TG_ALLOW_FROM` | Allowed Telegram user IDs (`*` = anyone; set your own ID for security) |
-| `ANTHROPIC_AUTH_TOKEN` | API Key (DeepSeek or Anthropic) |
+| `ANTHROPIC_API_KEY` | API Key — use this **or** `ANTHROPIC_AUTH_TOKEN` (DeepSeek or Anthropic) |
 
 ### API Configuration (DeepSeek)
 
@@ -49,7 +49,7 @@ Telegram (phone) ──→ Railway container ──→ cc-connect (daemon)
 | `CLAUDE_CODE_SUBAGENT_MODEL` | `deepseek-v4-flash` |
 | `CLAUDE_CODE_EFFORT_LEVEL` | `max` |
 
-If using the native Anthropic API, omit the variables above — only `ANTHROPIC_AUTH_TOKEN` is needed.
+If using the native Anthropic API, omit the variables above — only `ANTHROPIC_API_KEY` (or `ANTHROPIC_AUTH_TOKEN`) is needed.
 
 ### GitHub
 

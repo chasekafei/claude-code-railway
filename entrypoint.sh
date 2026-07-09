@@ -24,6 +24,17 @@ language = "${CC_CONNECT_LANGUAGE:-zh}"
     [projects.platforms.options]
       token = "${TG_BOT_TOKEN}"
       allow_from = "${TG_ALLOW_FROM:-*}"
+
+  [[projects.platforms]]
+    type = "discord"
+    [projects.platforms.options]
+      token = "${DISCORD_BOT_TOKEN}"
+      allow_from = "${DC_ALLOW_FROM:-*}"
+      guild_id = "${DISCORD_GUILD_ID:-}"
+      share_session_in_channel = ${DISCORD_SHARE_SESSION:-false}
+      group_reply_all = ${DISCORD_GROUP_REPLY_ALL:-false}
+      thread_isolation = ${DISCORD_THREAD_ISOLATION:-false}
+      progress_style = "${DISCORD_PROGRESS_STYLE:-card}"
 EOF
 
 # ── Symlink persisted dirs into $HOME ──

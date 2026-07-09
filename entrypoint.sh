@@ -10,6 +10,16 @@ mkdir -p /workspace/.ssh
 cat > /workspace/.cc-connect/config.toml << EOF
 language = "${CC_CONNECT_LANGUAGE:-zh}"
 
+[stream_preview]
+enabled = ${STREAM_PREVIEW_ENABLED:-true}
+interval_ms = ${STREAM_PREVIEW_INTERVAL:-1500}
+min_delta_chars = ${STREAM_PREVIEW_MIN_DELTA:-30}
+max_chars = ${STREAM_PREVIEW_MAX_CHARS:-2000}
+
+[instant_reply]
+enabled = true
+message = "${INSTANT_REPLY_MESSAGE:-🤔 处理中...}"
+
 [[projects]]
   name = "${CC_CONNECT_PROJECT:-workspace}"
 
